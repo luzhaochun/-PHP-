@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta charset="utf-8">
+	<title>WIFI营销精灵-<?php echo $title;?></title>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_2/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_2/css/buttons.min.css">
+	<!-- media queries css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_2/css/media-queries.css">
+	
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_2/js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body style="overflow: hidden;">
+	<div class="header">
+		<div class="title">WIFI营销精灵</div>
+	</div>
+	<div class="content clearfix">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="<?php echo APP_URL;?>/template/theme_2/images/bg.jpg"></div>
+		</div>
+	</div>
+	</div>
+	<div>
+	<div class="footer"></div>
+	<div class="inter-com">
+		<div class="leadBtn"><a href="<?php echo SITE_URL;?>/index.php?method=login" class="button login-btn">点此立即免费上网</a></div>
+		<p> 技术支持&nbsp;&nbsp; 同享网络 &nbsp;&nbsp;电话&nbsp;&nbsp;www.wifizn.com</p>
+	</div>
+	</div>
+	<script>
+		$(function(){
+			$('.swiper-container').css('max-height', $(window).height()+(80)+'px');
+		});
+	</script>
+</body>
+</html>

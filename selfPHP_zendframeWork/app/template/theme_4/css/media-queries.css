@@ -1,0 +1,188 @@
+/*头部*/
+.header {
+	width: 100%;
+	height: 45px;
+	background: #f7f7f7;
+	position: fixed;
+	*position:static;
+	z-index: 100;
+	top: 0;
+	box-shadow: 0px 1px 2px #F3F3F3;
+}
+.header .title {
+	width: 640px;
+	height: 45px;
+	font-size: 22px;
+	line-height: 45px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*首页背景*/
+.content {
+	width: 100%;
+	height: auto;
+	margin: 45px auto 0;
+	text-align:center;
+}
+.page-bg{
+	width: 640px;
+    height:auto; 
+	min-height:100%;
+    color: #FFF;
+    background: none;
+    text-align: center;
+	margin: 0px auto;
+	overflow: hidden;
+	backface-visibility: hidden;
+	z-index: -1;
+	position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+	top:0px;
+}
+.page-bg img{width:640px; height:auto; min-height:100%; vertical-align:bottom;}
+
+.fixdir{
+    text-align: center;
+    margin: 0px auto;
+    position: fixed;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    color: #111;
+    z-index: 999;
+}
+.fixdir a{color:#f9f9f9;}
+.fixdir a:hover,.fixdir a:focus{color:#f9f9f9;}
+.load-wrap {
+	width: 100%;
+	text-align: center;
+	padding: 100px 0
+}
+.load-wrap img {
+	display: inline;
+	max-width: 122px
+}
+.content .adver{width: 100%;height: auto;text-align: center}
+.content .adver img{width:640px;height:300px; vertical-align:bottom;}
+.content h3{font-size:22px;text-align: center; padding:20px 0px;}
+
+.shop-app {
+	width: 640px;
+	padding: 20px 20px;
+	margin: 0 auto;
+	margin-bottom:20px;
+	background: #FFF;
+	overflow: hidden;
+	cursor: default!important
+}
+.shop-app .app-box {
+	width: 675px;
+	margin-left: 30px;
+	font-size: 20px;
+	cursor: default!important
+}
+.shop-app .app-box .btnbox {
+	width: 130px;
+	height: 175px;
+	margin: 0 75px 20px 0;
+	text-align: center
+}
+.shop-app .app-box .btnbox img {
+	width: 130px;
+	height: 130px;
+	margin-bottom: 10px
+}
+
+
+@media screen and (max-width:640px) {
+/*头部*/
+.header{
+	height:35px;
+}
+.header .title {
+	width: 100%;
+	height: 35px;
+	font-size:18px;
+	line-height: 35px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*首页背景*/
+.content { margin: 35px auto 0;}
+.page-bg{ width: 100%;}
+.page-bg img{width:100%; height:100%;}
+
+
+
+.load-wrap {
+	padding: 80px 0
+}
+.load-wrap img {
+	display: inline;
+	max-width: 122px
+}
+.content .adver{width: 100%;}
+.content .adver img{max-width: 100%;width: 100%}
+.content h3{font-size:18px;}
+
+.shop-app {
+	width: 480px;
+	padding: 15px 15px
+}
+.shop-app .app-box {
+	width: 505px;
+	margin-left: 20px;
+	font-size: 18px
+}
+.shop-app .app-box .btnbox {
+	width: 100px;
+	height: 140px;
+	margin: 0 55px 15px 0
+}
+.shop-app .app-box .btnbox img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 5px
+}
+
+
+}
+
+@media screen and (max-width:480px) {
+/*头部*/
+.header{
+	height:30px;
+}
+.header .title {
+	width: 100%;
+	height: 30px;
+	font-size:14px;
+	line-height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.shop-app {
+	width: 320px;
+	padding: 10px 10px
+}
+.shop-app .app-box {
+	width: 315px;
+	margin-left: 15px;
+	font-size: 14px
+}
+.shop-app .app-box .btnbox {
+	width: 70px;
+	height: 100px;
+	margin: 0 30px 10px 0
+}
+.shop-app .app-box .btnbox img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 1px
+}
+}
+
+

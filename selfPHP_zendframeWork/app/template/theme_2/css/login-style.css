@@ -1,0 +1,516 @@
+<?php echo APP_URL;?>/template/theme_2.form-control {
+	display: block;
+	width: 100%; 
+	padding: 6px 12px;
+	vertical-align: middle;
+	background-color: #f9f9f9;
+	background-image: none;
+	border: 1px solid #d4d4d4;
+	border-radius:7px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.button {
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	background-color: #f9f9f9;
+	background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #e3e3e3));
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: -moz-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: -o-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: linear-gradient(top, #f9f9f9, #e3e3e3);
+	border-radius:7px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	border: 1px solid #d4d4d4;
+	line-height: 32px;
+	padding: 0 25.6px;
+	font-weight: 300;
+	color: #333333;
+	text-decoration: none;
+	text-align: center;
+}
+.button-flat-primary {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition-property: background;
+	-moz-transition-property: background;
+	-o-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	transition-duration: .3s;
+	background: #c66c31;
+	color: #fff;
+	text-shadow: none;
+	border: 0;
+}
+
+.header {
+	width: 100%;
+	height: 45px;
+	background: #f7f7f7;
+	position: fixed;
+	*position:static;
+	z-index: 100;
+	top: 0;
+	box-shadow: 0px 1px 2px #F3F3F3;
+}
+.header .title {
+	width: 640px;
+	height: 45px;
+	font-size: 22px;
+	line-height: 45px;
+	margin: 0 auto;
+	text-align: center;
+}
+.content{ 
+	width: 640px;
+	height: auto;
+	margin: 45px auto 0px;
+	background: none repeat scroll 0% 0% #FFF;
+}
+
+.login2_bg {
+	height: 100%;
+	margin-top: 0
+}
+.login2_bg img.bg {
+	display: none
+}
+.input_box {
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 120px 0 20px
+}
+.input_box .input_bg {
+	width: 500px;
+	height: 80px;
+	padding: 0 40px;
+	line-height: 80px;
+	margin-bottom: 10px;
+	background: url(../images/input_bg.png) repeat-x
+}
+.input_box .input_bgS1 {
+	width: 250px
+}
+.input_box .input_bgS2 {
+	width: 240px;
+	border: 0;
+	font-size: 21px
+}
+.input_box .input_bg .title_t {
+	font-size: 21px
+}
+.input_box .input_bg .title_t input {
+	height: 40px;
+	width: 320px;
+	font-size:21px;
+	line-height: 40px;
+	margin: 20px 0 0 10px;
+	background: 0;
+	border: 0;
+	outline: medium
+}
+.input_box .input_bg .title_t .input_s {
+	width: 170px
+}
+.input_box a.login_btn {
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+	padding: 10px 15px;
+	margin: 5px auto 15px;
+	background-color: #FFF;
+	color: #F32C52;
+	display: inline-block;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5) inset, 0px 1px 2px rgba(0, 0, 0, 0.15);
+	background: -moz-linear-gradient(center top , #FBFBFB, #E1E1E1) repeat scroll 0% 0% transparent;
+	vertical-align: middle;
+	border: 1px solid #D4D4D4;
+	line-height: 40px;
+	font-weight: 300;
+	text-shadow: 0px 1px 1px #FFF;
+	text-decoration: none;
+}
+.input_box a:hover.login_btn {
+	background-color: #FFF;
+}
+.input_box .wifi-deal {
+	margin: 5px auto;
+	max-width: 600px;
+}
+.input_box .wifi-deal .e-icon {
+	background: url(../images/icon.png);
+	height: 35px;
+	width: 40px;
+	background-position: 0 -30px;
+	margin: -5px 0 0 0
+}
+.other_login2 {
+	width: 540px;
+	margin: 0 auto;
+	padding: 40px 0 20px
+}
+.other_login2 span.fl {
+	color: #fff;
+	font-size: 18px
+}
+.other_login2 span.fr {
+	color: #c8221d;
+	font-size: 18px
+}
+.other_login2 span.fr a {
+	color: #c8221d;
+	text-decoration: underline
+}
+.other_login2 .ul_box {
+	width: 540px;
+	height: 85px;
+	margin: 80px auto 60px;
+	overflow: hidden
+}
+.other_login2 ul {
+	display: table;
+	margin: 0 auto
+}
+.other_login2 ul li {
+	width: 85px;
+	height: 85px;
+	margin: 0 10px;
+	float: left
+}
+.other_login2 ul li img {
+	width: 85px;
+	height: 85px
+}
+.wifi_agreement2, .wx_login2 {
+	background: url(../images/input_bg.png) repeat;
+	width: 100%;
+	padding: 25px
+}
+.wifi_agreement2 {
+	padding: 20px;
+	height: 500px;
+	overflow-y: scroll!important
+}
+.wifi_agreement2 .title {
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 15px
+}
+.wifi_agreement2 p {
+	text-indent: 2em;
+	line-height: 180%
+}
+.wifi_back2 {
+	background: url(../images/input_bg.png) repeat;
+	width: 100%;
+	line-height: 19px;
+	font-size: 20px;
+	margin: 10px auto 30px;
+	padding: 10px 0
+}
+.wifi_back2 .btn_box {
+	width: 60px;
+	margin: 0 auto
+}
+.wifi_back2 span {
+	color: #0e1212
+}
+.wifi_back2 .btn_box .iocn {
+	background: url(../images/back.png);
+	width: 12px;
+	height: 20px;
+	margin-right: 5px
+}
+.footer2 {
+	background: #fff;
+	color: #000;
+	text-align: center;
+	padding: 10px 0;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	margin-top: -44px;
+	filter: alpha(Opacity=50);
+	-moz-opacity: .5;
+	opacity: .5
+}
+
+
+@media screen and (max-width:640px) {
+.header{
+	height:35px;
+}
+.header .title {
+	width: 100%;
+	height: 35px;
+	font-size:18px;
+	line-height: 35px;
+	margin: 0 auto;
+	text-align: center;
+}
+.content {
+    width: 480px;
+    margin: 35px auto 0px;
+}
+.input_box {
+	width: 400px;
+	padding: 100px 0 20px
+}
+.input_box .input_bg {
+	width: 400px;
+	height: 70px;
+	padding: 0 30px;
+	line-height: 70px;
+	margin-bottom: 10px
+}
+.input_box .input_bgS1 {
+	width: 200px
+}
+.input_box .input_bgS2 {
+	width: 190px;
+	font-size: 20px;
+	padding: 0 20px
+}
+.input_box .input_bg .title_t {
+	font-size: 20px
+}
+.input_box .input_bg .title_t input {
+	height: 40px;
+	width: 320px;
+	font-size:20px;
+	line-height: 40px;
+	margin: 15px 0 0 5px
+}
+.input_box a.login_btn {
+	line-height: 40px;
+	font-size: 28px
+}
+.input_box .wifi-deal {
+	margin: 3px auto;
+	max-width: 480px
+}
+.input_box .wifi-deal .e-icon {
+	background-size: 32px 51.2px;
+	height: 28px;
+	width: 32px;
+	background-position: 0 -25px;
+	margin: -3px 0 0 0
+}
+.other_login2 {
+	width: 430px;
+	padding: 30px 0 15px
+}
+.other_login2 span.fl {
+	font-size: 17px
+}
+.other_login2 span.fr {
+	font-size: 17px
+}
+.other_login2 .ul_box {
+	width: 430px;
+	height: 70px;
+	margin: 60px auto 50px
+}
+.other_login2 ul li {
+	width: 70px;
+	height: 70px;
+	margin: 0 18px
+}
+.other_login2 ul li img {
+	width: 70px;
+	height: 70px
+}
+.wifi_agreement2 {
+	padding: 20px;
+	height: 400px;
+	overflow-y: scroll!important
+}
+.wifi_agreement2 .title {
+	font-size: 20px;
+	margin-bottom: 10px
+}
+.wifi_agreement2 p {
+	line-height: 170%
+}
+.wifi_back2 {
+	line-height: 19px;
+	font-size: 18px;
+	margin: 10px auto;
+	padding: 10px 0
+}
+.wifi_back2 .btn_box {
+	width: 60px
+}
+.wx_login2 {
+	padding: 20px
+}
+}
+@media screen and (max-width:480px) {
+.header{
+	height:30px;
+}
+.header .title {
+	width: 100%;
+	height: 30px;
+	font-size:14px;
+	line-height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+.content {
+    width: 320px;
+    margin: 30px auto 0px;
+}
+.input_box {
+	width: 280px;
+	padding: 80px 0 20px
+}
+.input_box .input_bg {
+	width: 280px;
+	height: 50px;
+	padding: 0 10px;
+	line-height: 50px;
+	margin-bottom: 5px
+}
+.input_box .input_bgS1 {
+	width: 140px;
+	line-height: 50px
+}
+.input_box .input_bgS2 {
+	width: 135px;
+	line-height: 50px;
+	font-size: 16px
+}
+.input_box .input_bg .title_t {
+	font-size: 16px
+}
+.input_box .input_bg .title_t input {
+	height: 30px;
+	width: 230px;
+	font-size:16px;
+	line-height: 30px;
+	margin: 10px 0 0 5px
+}
+
+.input_box a.login_btn {
+	line-height: 30px;
+	font-size: 20px
+}
+.other_login2 {
+	width: 380px;
+	padding: 20px 0 10px
+}
+.other_login2 span.fl {
+	font-size: 14px;
+	line-height: 25px
+}
+.other_login2 span.fr {
+	font-size: 12px
+}
+.other_login2 .ul_box {
+	width: 380px;
+	height: 55px;
+	margin: 40px auto 30px
+}
+.other_login2 ul li {
+	width: 55px;
+	height: 55px;
+	margin: 0 12px
+}
+.other_login2 ul li img {
+	width: 55px;
+	height: 55px
+}
+.wifi_agreement2 {
+	padding: 15px;
+	height: 300px;
+	overflow-y: scroll
+}
+.wifi_agreement2 .title {
+	font-size: 16px;
+	margin-bottom: 5px
+}
+.wifi_agreement2 p {
+	line-height: 150%;
+	font-size:14px;
+}
+.input_box .wifi-deal {
+	margin: 3px auto;
+	max-width: 320px
+}
+.input_box .wifi-deal .e-icon {
+	background-size: 24px 38.4px;
+	height: 22px;
+	width: 24px;
+	background-position: 0 -18px;
+	margin: 0
+}
+.wifi_back2 {
+	background: url(../images/input_bg.png) repeat;
+	line-height: 19px;
+	font-size: 16px;
+	margin: 8px auto;
+	padding: 8px 0
+}
+.wifi_back2 .btn_box {
+	width: 60px
+}
+.wifi_back2 .btn_box .iocn {
+	background-size: 9.6px 16px;
+	width: 9.6px;
+	height: 16px;
+	margin-right: 5px
+}
+
+.footer2 {
+	font-size:12px;
+	padding: 8px 0;
+	margin-top: -33px
+}
+}
+@media screen and (max-width:440px) {
+.other_login2 {
+	width: 290px;
+	padding: 20px 0 10px
+}
+.other_login2 span.fl {
+	font-size: 14px;
+	line-height: 25px
+}
+.other_login2 span.fr {
+	font-size: 12px
+}
+.other_login2 .ul_box {
+	width: 290px;
+	height: 45px;
+	margin: 40px auto 30px
+}
+.other_login2 ul li {
+	width: 45px;
+	height: 45px;
+	margin: 0 5px
+}
+.other_login2 ul li img {
+	width: 45px;
+	height: 45px
+}
+}
+@media screen and (max-width:320px) {
+.footer2 {
+	font-size: 10px;
+	padding: 6px 0;
+	margin-top: -28px
+}
+}

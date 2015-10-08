@@ -1,0 +1,398 @@
+
+
+body {
+	font-size: 18px
+}
+.content2 {
+    width: 640px;
+    height: auto;
+    margin: 45px auto 0px;
+    background: none;
+}
+.mt20 {
+	margin-top: 20px
+}
+.btn22-l {
+	width: 600px;
+	padding: 13px 0;
+	font: 22px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 240px;
+	padding: 13px 0;
+*padding:8px 0;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-l {
+	width: 600px;
+	padding: 12px 16px;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 350px;
+*width:320px;
+	padding: 12px 16px;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.login_logoBox {
+	width: 600px;
+	height: auto;
+	margin: 20px auto;
+}
+.login_logoBox .logo_b {
+	width: 90px;
+	height: 90px;
+	margin-right: 10px;
+	border: #fac8d1 1px solid;
+}
+.login_logoBox .logo_b img {
+	width: 90px;
+	height: 90px;
+}
+.login_logoBox .t_box {
+	margin-top: 20px;
+	line-height: 160%
+}
+.login_logoBox .t_box span.xy {
+	font-size: 14px;
+}
+.phone-login {
+	width: 600px;
+	height: auto;
+	margin: 10px auto;
+}
+.phone-login p {
+	margin: 10px 0
+}
+.phone-login .input_box {
+	border-radius: 0
+}
+.phone-login .wifi-deal {
+	width: 100%;
+	display: table;
+	margin-top: 15px;
+}
+.phone-login .wifi-deal .r-icon, .phone-login .wifi-deal .e-icon {
+	background: url(img/icon.png);
+	width: 40px;
+	height: 40px;
+	background-position: 0 -20px;
+	/*position:absolute;*/
+	margin: -7px 5px 0 180px
+}
+.phone-login .wifi-deal .e-icon {
+	background-position: 0 -60px;
+}
+.agreement {
+	width: 100%;
+	padding: 20px 40px 40px;
+}
+.agreement .title {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 200%
+}
+.agreement p {
+	font-size: 16px;
+	line-height: 150%;
+	text-indent: 2em
+}
+.other-login {
+	width: 100%;
+	padding: 20px 0 0;
+	margin-top: 28px;
+	border-top: #fac8d1 1px solid;
+}
+.other-login hr {
+	width: 100%;
+	margin: 10px auto 0;
+	border-top: #fac8d1 1px solid;
+}
+.other-login .title {
+	width: 600px;
+	margin: 0 auto;
+	font-size: 21px
+}
+.other-login .login-box {
+	width: 600px;
+	padding: 20px 0;
+	margin: 10px auto 30px;
+	border: #fac8d1 1px solid;
+	font-size: 18px
+}
+.other-login .login-box .img_box {
+	margin: 0 auto;
+	display: table
+}
+.other-login .login-box img {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto
+}
+.other-login .login-box .login-btn {
+	width: 90px;
+	text-align: center;
+	margin: 0 15px;
+}
+.other-login .login-box .login-btn div.c-back1 {
+	width: 90px;
+	line-height: 40px;
+	float: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+@media screen and (max-width:640px) {
+body {
+	font-size: 16px
+}
+.content2 {
+    width: 480px;
+    margin: 35px auto 0px;
+}
+.mt20 {
+	margin-top: 18px
+}
+.btn22-l {
+	width: 450px;
+	padding: 10px 0;
+	font: 22px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 190px;
+	padding: 11px 0;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-l {
+	width: 450px;
+	padding: 10px 14px;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 250px;
+	padding: 10px 14px;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.login_logoBox {
+	width: 450px;
+	margin: 15px auto;
+}
+.login_logoBox .logo_b {
+	width: 80px;
+	height: 80px;
+	margin-right: 8px;
+}
+.login_logoBox .logo_b img {
+	width: 80px;
+	height: 80px;
+}
+.login_logoBox .t_box {
+	width: 300px;
+	margin-top: 2px;
+	line-height: 160%
+}
+.login_logoBox .t_box span.xy {
+	font-size: 14px;
+}
+.phone-login {
+	width: 450px;
+	height: auto;
+	margin: 10px auto;
+}
+.phone-login p {
+	margin: 10px 0
+}
+.phone-login .input_box {
+	border-radius: 0;
+	padding: 8px 10px
+}
+.phone-login .wifi-deal {
+	margin-top: 15px;
+}
+.phone-login .wifi-deal .r-icon, .phone-login .wifi-deal .e-icon {
+	background: url(img/icon.png);
+	background-size: 35px 70px;
+	width: 30px;
+	height: 30px;
+	background-position: 0 -81px;
+	margin: -7px 5px 0 130px
+}
+.phone-login .wifi-deal .e-icon {
+	background-position: 0 -39px;
+}
+.agreement {
+	width: 100%;
+	padding: 10px 30px 30px;
+	overflow-y: scroll !important;
+}
+.agreement .title {
+	width: 100%;
+	font-size: 18px;
+	line-height: 180%
+}
+.agreement p {
+	font-size: 14px;
+	line-height: 140%;
+}
+.other-login {
+	padding: 20px 0 5px;
+	margin-top: 28px;
+}
+.other-login hr {
+	margin: 8px auto 0;
+}
+.other-login .title {
+	width: 450px;
+	margin: 0 auto;
+	font-size: 18px
+}
+.other-login .login-box {
+	width: 450px;
+	margin: 10px auto 30px;
+	font-size: 16px
+}
+.other-login .login-box img {
+	width: 60px;
+	height: 60px;
+}
+.other-login .login-box .login-btn {
+	width: 85px;
+	margin: 0 13px;
+}
+.other-login .login-box .login-btn div.c-back1 {
+	width: 85px;
+	line-height: 40px;
+}
+
+}
+@media screen and (max-width:480px) {
+body {
+	font-size: 14px
+}
+.content2 {
+    width: 320px;
+    margin: 30px auto 0px;
+}
+.mt20 {
+	margin-top: 15px
+}
+.btn22-l {
+	width: 300px;
+	padding: 8px 0;
+	font: 20px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 140px;
+	padding: 8px 0;
+	font: 18px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-l {
+	width: 300px;
+	padding: 8px 12px;
+	font: 18px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 150px;
+	padding: 8px 12px;
+	font: 18px/1.25 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.login_logoBox {
+	width: 300px !important;
+	margin: 10px auto;
+}
+.login_logoBox .logo_b {
+	width: 60px;
+	height: 60px;
+	margin-right: 8px;
+}
+.login_logoBox .logo_b img {
+	width: 60px;
+	height: 60px;
+}
+.login_logoBox .t_box {
+	width: 230px;
+	line-height: 130%
+}
+.login_logoBox .t_box span.xy {
+	font-size: 12px;
+}
+.phone-login {
+	width: 300px;
+	height: auto;
+	margin: 10px auto;
+}
+.phone-login p {
+	margin: 10px 0
+}
+.phone-login .input_box {
+	border-radius: 0;
+	padding: 6px 8px;
+	font-size: 14px;
+}
+.phone-login .btn22-l {
+	padding: 8px 10px;
+	font-size: 16px;
+}
+.phone-login .wifi-deal {
+	margin-top: 10px;
+}
+.phone-login .wifi-deal .r-icon, .phone-login .wifi-deal .e-icon {
+	background: url(img/icon.png);
+	background-size: 30px 60px;
+	width: 25px;
+	height: 25px;
+	background-position: 0 -10px;
+	margin: -3px 5px 0 60px
+}
+.phone-login .wifi-deal .e-icon {
+	background-position: 0 -34px;
+}
+.agreement {
+	width: 100%;
+	padding: 10px 20px 20px;
+	overflow-y: scroll !important;
+}
+.agreement .title {
+	font-size: 16px;
+	line-height: 160%
+}
+.agreement p {
+	font-size: 12px;
+	line-height: 130%;
+}
+.other-login {
+	padding: 12px 0 5px;
+	margin-top: 20px;
+}
+.other-login hr {
+	margin: 8px auto 0;
+}
+.other-login .title {
+	width: 300px;
+	margin: 0 auto;
+	font-size: 16px
+}
+.other-login .login-box {
+	width: 300px;
+	padding: 12px 0;
+	margin: 10px auto 20px;
+	font-size: 12px
+}
+.other-login .login-box img {
+	width: 45px;
+	height: 45px;
+}
+.other-login .login-box .login-btn {
+	width: 50px;
+	margin: 0 5px;
+}
+.other-login .login-box .login-btn div.c-back1 {
+	width: 50px;
+	line-height: 32px;
+}
+
+
+}
+

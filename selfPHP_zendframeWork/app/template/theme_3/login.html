@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta charset="utf-8">
+	<title>WIFI营销精灵-<?php echo $title;?></title>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_3/css/style.css">
+	<!-- media queries css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_3/css/media-queries.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_3/css/login-style.css">
+	
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_3/js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="title">WIFI营销精灵</div>
+	</div>
+	<section class="content clearfix">
+		<div class="page-bg"><img src="<?php echo APP_URL;?>/template/theme_3/images/bg.jpg"></div>
+	</section>
+	<div >
+		<div class="al_login ali_login clearfix">
+			
+			<div class="phone-login" id="login-box">
+				<div class="al_title">手机短信验证上网</div>
+				<hr class="al_hr">
+				<form id="loginForm" name="loginForm" method="post" action="#">
+				<input name="phone" type="tel" id="phone" class="al_inputL J_phone" placeholder="请输入手机号码" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;);" onafterpaste="this.value=this.value.replace(/\D/g,&#39;&#39;);" value="">
+				<div class="J_code_div" id="checkInfo">
+					<hr class="al_hr">
+					<div class="al_pass">
+						<input name="passwd" type="text" id="upasswd" class="al_inputS" placeholder="请输入验证码">
+						<input type="button" id="fsyzm" class="al_a J_phone_code" onclick="sendSms()" value="获取验证码">
+					</div>
+				</div>
+				<hr class="al_hr">
+				<div class="wifi-deal c-red" id="errorInfo" style="display: none;"></div> 
+				</form>
+				<a href="javascript:userlogin()">
+				<div class="al_btn  J_wifi_btn" id="loginBtn">连 接 WiFi</div>
+				</a> 
+			</div>
+			<div id="agreementInfo" class="agreement hide">
+				<div class="title">免费Wi-Fi用户使用协议</div>
+				<p>本免费Wi-Fi由同享网络有限公司开发的WiTown智能Wi-Fi营销系统作为软件及硬件平台、由您当前上网环境所在的技术服务商提供运营和维护服务。</p>
+				<p>一、用户在申请和使用本网络时，必须遵守以下规则：</p>
+				<p>1．用户必须遵守国家的相关法律和互联网各项规章制度。</p>
+				<p>2．申请的帐号，仅允许自己使用，不得变更或转借他人使用，用户要对该帐号的所有活动和事件负全部责任。</p>
+				<p>3．用户对服务的使用必须遵循：</p>
+				<p>（1）从中国境内向外传输技术性资料时必须符合中国有关法规；</p>
+				<p>（2）使用网络服务不作非法用途，不干扰或混乱网络服务；</p>
+				<p>（3）遵守所有使用网络服务的网络协议、规定、程序和惯例；</p>
+				<p>（4）不散布谣言，扰乱社会秩序，破坏社会稳定；不散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪；不侮辱或者诽谤他人，侵害他人合法权益；</p>
+				<p>（5）不传输任何非法、骚扰性、中伤他人、辱骂性、恐吓性、伤害性、庸俗、淫秽等信息资料；不传输任何教唆他人构成犯罪行为的资料；不传输涉及国家安全的资料；不传输任何不符合当地法规、国家法律和国际法律的资料。</p>
+				<p>4.用户需对自己在网上的行为承担法律责任。用户若在网上散布和传播反动、色情或其他违反国家法律的信息，本系统记录有可能作为用户违反法律的证据。</p>
+				<p>5.用户和上网终端信息如有变更，或发生密码泄漏等情况，应及时向免费Wi-Fi网络技术服务商报告，否则造成的后果由用户承担。</p>
+				<p>二、免费Wi-Fi网络技术服务商在提供网络服务时遵循以下原则：</p>
+				<p>1．对于免费Wi-Fi网络用户只提供网络接入服务，不提供其它的服务,不对用户网络行为负责。</p>
+				<p>2．对于免费Wi-Fi网络服务器上的帐号用户，我们的服务原则是：</p>
+				<p>（1）不公开用户的联系方式。</p>
+				<p>（2）尊重用户隐私权，绝不公开、编辑或透露用户信息，除非有法律许可要求及公安管理规定。</p>
+				<p>（3）保留判定用户的行为是否符合“用户协议”的权利，如果免费Wi-Fi网络技术服务商认为用户违背了本协议，将会中断其帐号，相关损失由用户自己负责。</p>
+				<p>以上“网络用户协议”的各项条款应与国家有关法律、法规保持一致，如有与法律、法规条款相抵触的内容，以法律、法规条款为准。</p>
+				
+				<a href="javascript:void(0)">
+				<div class="topbtn c-white" id="loginTopbtn"> 登录方式</div>
+				</a>
+			</div>
+			<div class="al_otherBox other-login">
+				<div class="title"><span id="loginTxt">选择登录方式：</span>
+					<div class="wifi-deal fr Iagree">
+					<input checked="" type="checkbox" onclick="agreement(this)">
+					<span>&nbsp; 我同意<a href="javascript:void(0);" id="agreementBtn">《Wi-Fi使用协议》</a></span>
+					</div>
+				</div>
+				<form id="qqLoginForm" name="qqLoginForm" method="post" action="#" class="fl">  
+				</form>
+				<a href="<?php echo SITE_URL;?>/oauth.php?method=qqlogin" onclick=""> <img src="<?php echo APP_URL;?>/template/theme_3/images/qq.png"> </a>
+				<form id="weiboLoginForm" name="weiboLoginForm" method="post" action="#" class="fl">
+				</form>
+				<a href="<?php echo SITE_URL;?>/oauth.php?method=sinaweibologin" onclick=""> <img src="<?php echo APP_URL;?>/template/theme_3/images/wb.png"> </a>
+				<form id="weixinLoginForm" name="weixinLoginForm" method="post" action="#" class="fl">
+				</form>
+				<a href="javascript:void(0);" onclick=""> <img src="<?php echo APP_URL;?>/template/theme_3/images/wx.png"> </a>
+				<form id="yaoyiyaoLoginForm" name="yaoyiyaoLoginForm" method="post" action="#" class="fl">
+				</form>
+				<a href="javascript:void(0);" onclick=""> <img src="<?php echo APP_URL;?>/template/theme_3/images/yy.png"> </a> 
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_3/js/common.js"></script>
+</body>
+</html>

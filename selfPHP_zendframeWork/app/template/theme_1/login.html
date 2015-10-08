@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta charset="utf-8">
+	<title>WIFI营销精灵-<?php echo $title;?></title>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/style.css">
+	<!-- media queries css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/login-style.css">
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/idangerous.js"></script>
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/common.js"></script>
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/bootstrap.min.js" charset="UTF-8"></script> 
+</head>
+
+<body>
+	<div class="header">
+		<div class="title">WIFI营销精灵</div>
+	</div>
+	<div id="swiper-container-1213" class="swiper-container">
+		<div class="swiper-wrapper">
+		<?php if(!empty($adverts)){ 
+		    foreach($adverts as $item){
+		?>
+			<div class="swiper-slide" data-id="<?php echo $item['id'];?>"> <a href="http://<?php echo $item['img_link_url'];?>"> <img style="width:640px;height:300px"  class="imgB loadImg" src="<?php echo $item['img_path'];?>"> </a> </div>
+		<?php } } else{ ?>
+		    <div class="swiper-slide"> <a href="javascript:void(0)"> <img class="imgB loadImg" src="<?php echo APP_URL;?>/template/theme_1/images/ad01.jpg"> </a> </div>
+		<?php } ?>
+		</div>
+		
+		<div id="pagination_1213" class="pagination">
+			<span class="swiper-pagination-switch"></span>
+			<span class="swiper-pagination-switch"></span>
+			<span class="swiper-pagination-switch"></span>
+		</div>
+	</div>
+	
+	<div class="phone-login clearfix">
+		<a href="#login_area">
+			<div class="topbtn c-white" id="loginTopbtn"> 登录方式
+			<div class="b-icon"></div>
+			</div>
+		</a>
+		<div id="login-box">
+			<form style="margin:0;padding:0" id="loginForm" name="loginForm" method="post" action="#">
+				<input id="phone" name="phone" value="" type="tel" class="form-control input20-l" placeholder="请输入手机号码" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');">
+				<div id="checkInfo">
+					<input name="passwd" id="upasswd" type="tel" class="form-control input20-s mt20 fl" maxlength="12" placeholder="请输入验证码">
+					<input type="button" id="fsyzm" class="button btn20-s mt20 fr" onclick="sendSms()" value="获取验证码">
+				</div>
+				<div class="wifi-deal fl hide" id="errorInfo" style="display: none;"></div>
+				<input type="button" onclick="userlogin()" value="连 接 WiFi" class="button button-flat-primary btn22-l mt20" id="loginBtn">
+			</form>
+		</div>
+		<div class="login-hr"></div>
+	</div>
+	<div id="agreementInfo" class="agreement hide">
+		<div class="title">免费Wi-Fi用户使用协议</div>
+        <p>本免费Wi-Fi由同享网络有限公司开发的WiTown智能Wi-Fi营销系统作为软件及硬件平台、由您当前上网环境所在的技术服务商提供运营和维护服务。</p>
+        <p>一、用户在申请和使用本网络时，必须遵守以下规则：</p>
+        <p>1．用户必须遵守国家的相关法律和互联网各项规章制度。</p>
+		<p>2．申请的帐号，仅允许自己使用，不得变更或转借他人使用，用户要对该帐号的所有活动和事件负全部责任。</p>
+		<p>3．用户对服务的使用必须遵循：</p>
+		<p>（1）从中国境内向外传输技术性资料时必须符合中国有关法规；</p>
+		<p>（2）使用网络服务不作非法用途，不干扰或混乱网络服务；</p>
+		<p>（3）遵守所有使用网络服务的网络协议、规定、程序和惯例；</p>
+		<p>（4）不散布谣言，扰乱社会秩序，破坏社会稳定；不散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪；不侮辱或者诽谤他人，侵害他人合法权益；</p>
+		<p>（5）不传输任何非法、骚扰性、中伤他人、辱骂性、恐吓性、伤害性、庸俗、淫秽等信息资料；不传输任何教唆他人构成犯罪行为的资料；不传输涉及国家安全的资料；不传输任何不符合当地法规、国家法律和国际法律的资料。</p>
+		<p>4.用户需对自己在网上的行为承担法律责任。用户若在网上散布和传播反动、色情或其他违反国家法律的信息，本系统记录有可能作为用户违反法律的证据。</p>
+		<p>5.用户和上网终端信息如有变更，或发生密码泄漏等情况，应及时向免费Wi-Fi网络技术服务商报告，否则造成的后果由用户承担。</p>
+		<p>二、免费Wi-Fi网络技术服务商在提供网络服务时遵循以下原则：</p>
+		<p>1．对于免费Wi-Fi网络用户只提供网络接入服务，不提供其它的服务,不对用户网络行为负责。</p>
+		<p>2．对于免费Wi-Fi网络服务器上的帐号用户，我们的服务原则是：</p>
+		<p>（1）不公开用户的联系方式。</p>
+		<p>（2）尊重用户隐私权，绝不公开、编辑或透露用户信息，除非有法律许可要求及公安管理规定。</p>
+		<p>（3）保留判定用户的行为是否符合“用户协议”的权利，如果免费Wi-Fi网络技术服务商认为用户违背了本协议，将会中断其帐号，相关损失由用户自己负责。</p>
+		<p>以上“网络用户协议”的各项条款应与国家有关法律、法规保持一致，如有与法律、法规条款相抵触的内容，以法律、法规条款为准。</p>
+	</div>
+	<div class="other-login clearfix" id="login_area">
+		<div class="title"><span id="loginTxt">选择登录方式：</span>
+			<div class="wifi-deal fr Iagree">
+				<input checked="" type="checkbox" onclick="agreement(this)">
+				<span>&nbsp; 我同意<a href="javascript:void(0);" id="agreementBtn">《Wi-Fi使用协议》</a></span>
+			</div>
+		</div>
+		<div class="login-box clearfix" id="login_area">
+			<div style="display:table; margin:10px auto">
+				<div class="login-btn fl mt20">
+					<a href="<?php echo SITE_URL;?>/oauth.php?method=sinaweibologin">
+						<div class="wb-btn"></div>
+					</a>
+					<div class="c-back">微博登录</div>
+				</div>
+				<div class="login-btn fl mt20">
+					<a href="<?php echo SITE_URL;?>/oauth.php?method=qqlogin" onclick="javascript:document.qqLoginForm.submit();">
+						<div class="qq-btn"></div>
+					</a>
+					<div class="c-back">QQ登录</div>
+				</div>
+				<div class="login-btn fl mt20">
+					<a href="">
+						<div class="wx-btn"></div>
+					</a>
+					<div class="c-back">微信登录</div>
+				</div>
+				<div class="login-btn fl mt20">
+					<a href="javascript:void();" onclick="document.getElementById('popupDialog').style.display='block'">
+						<div class="yy-btn"></div>
+					</a>
+					<div class="c-back">摇一摇登录</div>
+				</div>
+				<!--开放平台--> 
+			</div>
+		</div>
+		<div id="loginShade" class="login-shade hide"></div>
+	</div>
+	
+<script>
+    $(function(){
+    	$(".swiper-container").on('click','.swiper-slide',function(){
+            collectAdvert($(this).attr('data-id'),2);
+    	})
+    })
+	function sendSms(){
+		var phone=jQuery.trim(jQuery('#phone').val());
+		if("" == phone) {
+			$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>手机号码不能为空!").show(); return;
+		}
+		if(!/^(1[34578]\d{9})$/.test(phone)) {
+			$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>手机号码格式不正确!").show(); return;
+		}
+		jQuery.post("<?php echo SITE_URL;?>/index.php?method=sendValidateCode", {mobile:phone}, function(result) {
+			var r = jQuery.parseJSON(result);
+			
+			if(r.status == true) {
+				var wait=120;
+				(function time(o) {
+					if (wait == 0) {
+						o.removeAttribute("disabled");
+						o.value="免费获取验证码";
+						wait = 10;
+					} else {
+						o.setAttribute("disabled", true);
+						o.value="重新发送(" + wait + ")";
+						wait--;
+						setTimeout(function() {
+							time(o)
+						}, 1000);
+					}
+				})(document.getElementById("fsyzm"));
+			} else {
+				$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>" + r.msg).show(); return;
+			}
+		});
+	}
+	
+	function userlogin(){
+		var phone = jQuery.trim(jQuery('#phone').val());
+		if("" == phone) {
+			$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>手机号码不能为空!").show(); return;
+		}
+		if(!/^(1[34578]\d{9})$/.test(phone)) {
+			$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>手机号码格式不正确!").show(); return;
+		}
+		var upasswd = jQuery.trim(jQuery('#upasswd').val());
+		if("" == upasswd) {
+			$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>验证码不能为空!").show(); return;
+		}
+		
+		jQuery.post("<?php echo SITE_URL;?>/index.php?method=ajaxValidateCode", {code:upasswd}, function(result) {
+			var r = jQuery.parseJSON(result);
+			if(r.status == true) {
+				location.href = "<?php echo SITE_URL;?>/index.php?method=home";
+			} else {
+				$('#errorInfo').html("<div class='e-icon fl'></div><span class='c-red fl'></div>" + r.msg).show(); return;
+			}
+		});
+	}
+	
+	var mySwiper = new Swiper('#swiper-container-1213',{
+        pagination: '#pagination_1213',
+        paginationClickable: true,
+        moveStartThreshold: 100,
+        autoplay:2500,
+        onSlideChangeStart:function(e){
+        	var target = $(mySwiper.activeSlide());
+            var advert_id = target.attr('data-id');
+            collectAdvert(advert_id,1);
+        },
+        onTouchStart:function(){
+        	var target = $(mySwiper.activeSlide());
+            var advert_id = target.attr('data-id');
+            collectAdvert(advert_id,1);
+        }
+    })
+	
+	var collectAdvert = function(advert_id,active){
+    	$.ajax({
+      	   data:{advert_id:advert_id,active:active},
+      	   type:'get',
+      	   url:'<?php echo SITE_URL;?>/index.php?method=ajaxCollectAdvert',
+      	   success:function(ret){
+      		   //do nothing here
+      	   }
+         })
+    }
+</script>
+</body>
+</html>

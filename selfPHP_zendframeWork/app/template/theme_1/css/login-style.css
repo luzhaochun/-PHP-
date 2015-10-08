@@ -1,0 +1,609 @@
+.form-control {
+	display: block;
+	width: 100%; 
+	padding: 6px 12px;
+	vertical-align: middle;
+	background-color: #f9f9f9;
+	background-image: none;
+	border: 1px solid #d4d4d4;
+	border-radius:7px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.button {
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0px 1px 2px rgba(0,0,0,0.15);
+	background-color: #f9f9f9;
+	background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #e3e3e3));
+	background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: -moz-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: -o-linear-gradient(top, #f9f9f9, #e3e3e3);
+	background: linear-gradient(top, #f9f9f9, #e3e3e3);
+	border-radius:7px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	border: 1px solid #d4d4d4;
+	line-height: 32px;
+	padding: 0 25.6px;
+	font-weight: 300;
+	color: #333333;
+	text-decoration: none;
+	text-align: center;
+}
+.button-flat-primary {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition-property: background;
+	-moz-transition-property: background;
+	-o-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	transition-duration: .3s;
+	background: #c66c31;
+	color: #fff;
+	text-shadow: none;
+	border: 0;
+}
+
+.header {
+	width: 100%;
+	height: 45px;
+	background: #f7f7f7;
+	position: fixed;
+	*position:static;
+	z-index: 100;
+	top: 0;
+	box-shadow: 0px 1px 2px #F3F3F3;
+}
+.header .title {
+	width: 640px;
+	height: 45px;
+	font-size: 22px;
+	line-height: 45px;
+	margin: 0 auto;
+	text-align: center;
+}
+.swiper-container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 1
+}
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	-webkit-transition-property: -webkit-transform, left, top;
+	-webkit-transition-duration: 0s;
+	-webkit-transform: translate3d(0px, 0, 0);
+	-webkit-transition-timing-function: ease;
+	-moz-transition-property: -moz-transform, left, top;
+	-moz-transition-duration: 0s;
+	-moz-transform: translate3d(0px, 0, 0);
+	-moz-transition-timing-function: ease;
+	-o-transition-property: -o-transform, left, top;
+	-o-transition-duration: 0s;
+	-o-transform: translate3d(0px, 0, 0);
+	-o-transition-timing-function: ease;
+	-o-transform: translate(0px, 0px);
+	-ms-transition-property: -ms-transform, left, top;
+	-ms-transition-duration: 0s;
+	-ms-transform: translate3d(0px, 0, 0);
+	-ms-transition-timing-function: ease;
+	transition-property: transform, left, top;
+	transition-duration: 0s;
+	transform: translate3d(0px, 0, 0);
+	transition-timing-function: ease
+}
+.swiper-free-mode>.swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto
+}
+.swiper-slide {
+	float: left
+}
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x
+}
+.swiper-container {
+	width: 640px;
+	height: 300px;
+	color: #fff;
+	background: #999;
+	text-align: center
+}
+.swiper-slide {
+	width: 640px;
+	height: 300px;
+	text-align: center
+}
+.swiper-slide img {
+	width: 640px;
+	height: 300px;
+	margin: 0 auto
+}
+.pagination {
+	position: absolute;
+	z-index: 20;
+	left: 20px;
+	bottom: 15px;
+	margin: 0
+}
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	background: 0;
+	margin-right: 8px;
+	opacity: .8;
+	border: 2px solid #fff;
+	cursor: pointer
+}
+.swiper-visible-switch {
+	background: #aaa
+}
+.swiper-active-switch {
+	background: #c66c31;
+	border: 2px solid #c66c31
+}
+@media screen and (max-width:640px) {
+.swiper-container, .swiper-slide {
+	width: 480px;
+	height: 225px
+}
+.swiper-slide img {
+	width: 480px;
+	height: 225px
+}
+.pagination {
+	left: 18px;
+	bottom: 12px
+}
+.swiper-pagination-switch {
+	width: 12px;
+	height: 12px;
+	border-radius: 12px;
+	margin-right: 6px
+}
+}
+@media screen and (max-width:480px) {
+.swiper-container, .swiper-slide {
+	width: 320px;
+	height: 150px
+}
+.swiper-slide img {
+	width: 320px;
+	height: 150px
+}
+.pagination {
+	left: 12px;
+	bottom: 8px
+}
+.swiper-pagination-switch {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	margin-right: 5px
+}
+}
+
+
+.mt20 {
+	margin-top: 20px
+}
+.input20-l {
+	width: 600px;
+	padding: 12px 26px;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 350px;
+	*width:320px;
+	padding: 12px 26px;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn22-l {
+	width: 600px;
+	padding: 12px 0;
+	font: 26px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 240px;
+	padding: 12px 0;
+	*padding:8px 0;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.phone-login {
+	width: 600px;
+	height: auto;
+	margin: -70px auto 10px
+}
+.phone-login .topbtn {
+	background: url(../images/way.png) no-repeat;
+	background-size: 140px 140px;
+	width: 140px;
+	height: 140px;
+	*height:86px;
+	text-align: center;
+	font-size: 23px;
+	margin: 0 auto 10px;
+	padding-top: 50px;
+	position: relative;
+	z-index: 99
+}
+.phone-login .wifi-deal {
+	width: 100%;
+	margin: 20px auto 0;
+	text-align: center
+}
+.phone-login .login-hr {
+	width: 600px;
+	margin: 30px auto 10px;
+	background:#ccc;
+	color:#ccc;
+	border-top: #ccc 2px solid
+}
+.agreement {
+	width: 600px;
+	*width:560px;
+	*margin:0 auto;
+	margin:0px auto;
+	color:#333;
+	padding: 20px 40px 40px;
+}
+.agreement .title {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	line-height: 200%
+}
+.agreement p {
+	font-size: 16px;
+	line-height: 150%;
+	text-indent: 2em
+}
+.other-login {
+	width: 640px;
+	padding: 20px 0 5px;
+	margin: 28px auto 0;
+	color: #333;
+}
+.other-login .title {
+	width: 600px;
+	margin: 0 auto;
+	font-size: 21px
+}
+.other-login .login-box, .other-login .login-shade {
+	width: 640px;
+	height: 180px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: table;
+	font-size: 20px
+}
+.other-login .login-shade {
+	display: none
+}
+.other-login .login-shade {
+	background: #fff;
+	filter: alpha(Opacity=70);
+	-moz-opacity: .7;
+	opacity: .7;
+	position: absolute;
+	margin-top: -175px
+}
+.other-login .login-box .login-btn {
+	width: 112px;
+	height: 179px;
+	margin: 20px 22px 10px;
+	text-align: center
+}
+.other-login .login-box .login-btn .wb-btn {
+	background: url(../images/wb.png);
+	background-size:112px 112px;
+	width: 112px;
+	height: 112px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .qq-btn {
+	background: url(../images/qq.png);
+	background-size:112px 112px;
+	width: 112px;
+	height: 112px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .wx-btn {
+	background: url(../images/wx.png);
+	background-size:112px 112px;
+	width: 112px;
+	height: 112px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .yy-btn {
+	background: url(../images/yy.png);
+	background-size:112px 112px;
+	width: 112px;
+	height: 112px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn div.c-white {
+	width: 112px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+
+/*****smaller than 640*****/
+@media screen and (max-width: 640px) {
+.header{
+	height:35px;
+}
+.header .title {
+	width: 100%;
+	height: 35px;
+	font-size:18px;
+	line-height: 35px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mt20 {
+	margin-top:18px
+}
+.input20-l {
+	width: 450px;
+	padding: 10px 14px;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 250px;
+	padding: 10px 14px;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn22-l {
+	width: 450px;
+	padding: 10px 0;
+	font: 24px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 190px;
+	padding: 10px 0;
+	font: 20px/1.75 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.phone-login {
+	width: 450px;
+	height: auto;
+	margin: -60px auto 10px
+}
+.phone-login .topbtn {
+	background-size: 130px 130px;
+	width: 130px;
+	height: 130px;
+	font-size: 21px;
+	padding-top: 45px
+}
+.phone-login .wifi-deal {
+	margin: 18px auto 0;
+}
+.phone-login .login-hr {
+	width: 450px;
+	margin: 20px auto 10px;
+}
+.agreement {
+	width: 450px;
+	margin:0px auto;
+	padding: 15px 30px 40px;
+	height: 400px;
+	overflow-y: scroll!important
+}
+.agreement .title {
+	font-size: 18px;
+}
+.agreement p {
+	font-size: 14px;
+}
+.other-login {
+	width: 480px;
+	padding: 18px 0 4px;
+	margin: 25px auto 0;
+}
+.other-login .title {
+	width: 450px;
+	font-size: 18px;
+}
+.other-login .login-box, .other-login .login-shade {
+	width: 480px;
+	height: 137px;
+	font-size: 18px;
+}
+.other-login .login-shade {
+	margin-top: -135px;
+}
+.other-login .login-box .login-btn {
+	width: 92px;
+	height: 147px;
+	margin: 15px 13px 5px;
+}
+.other-login .login-box .login-btn .wb-btn {
+	background: url(../images/wb.png);
+	background-size:92px 92px;
+	width: 92px;
+	height: 92px;
+	margin-bottom: 5px;
+}
+.other-login .login-box .login-btn .qq-btn {
+	background: url(../images/qq.png);
+	background-size:92px 92px;
+	width: 92px;
+	height: 92px;
+	margin-bottom: 5px;
+}
+.other-login .login-box .login-btn .wx-btn {
+	background: url(../images/wx.png);
+	background-size:92px 92px;
+	width: 92px;
+	height: 92px;
+	margin-bottom: 5px;
+}
+.other-login .login-box .login-btn .yy-btn {
+	background: url(../images/yy.png);
+	background-size:92px 92px;
+	width: 92px;
+	height: 92px;
+	margin-bottom: 5px;
+}
+.other-login .login-box .login-btn div.c-white {
+	width: 92px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+}
+
+/*****smaller than 480*****/
+@media screen and (max-width: 480px) {
+.header{
+	height:30px;
+}
+.header .title {
+	width: 100%;
+	height: 30px;
+	font-size:14px;
+	line-height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+.mt20 {
+	margin-top: 12px
+}
+.input20-l {
+	width: 300px;
+	padding: 6px 12px;
+	font: 18px/1.55 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.input20-s {
+	width: 150px;
+	padding: 5px 12px;
+	font: 18px/1.55 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn22-l {
+	width: 300px;
+	padding: 6px 0;
+	font: 22px/1.55 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.btn20-s {
+	width: 140px;
+	padding: 6px 0;
+	font: 18px/1.55 Microsoft YaHei, Tahoma, arial, \5b8b\4f53
+}
+.phone-login {
+	width: 300px;
+	height: auto;
+	margin: -45px auto 10px
+}
+.phone-login .topbtn {
+	background-size: 100px 100px;
+	width: 100px;
+	height: 100px;
+	font-size: 15px;
+	padding-top: 35px
+}
+.phone-login .wifi-deal {
+	margin: 15px auto 0
+}
+.phone-login .login-hr {
+	width: 300px;
+	margin: 15px auto 10px;
+}
+.agreement {
+	width: 300px;
+	padding: 10px 20px 30px;
+	height: 240px;
+	overflow-y: scroll!important
+}
+.agreement .title {
+	font-size: 18px;
+}
+.agreement p {
+	font-size: 12px;
+}
+.other-login {
+	width: 320px;
+	padding: 10px 0px 3px;
+	margin: 10px auto 0
+}
+.other-login .title {
+	width: 300px;
+	margin: 0 auto;
+	font-size: 13px
+}
+.other-login .login-box, .other-login .login-shade {
+	width: 320px;
+	height: 96px;
+	font-size: 12px;
+}
+.other-login .login-shade {
+	margin-top: -95px;
+}
+.other-login .login-box .login-btn {
+	width: 63px;
+	height: 101px;
+	margin: 10px 8px 0
+}
+.other-login .login-box .login-btn .wb-btn {
+	background: url(../images/wb.png);
+	background-size:63px 63px;
+	width: 63px;
+	height: 63px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .qq-btn {
+	background: url(../images/qq.png);
+	background-size:63px 63px;
+	width: 63px;
+	height: 63px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .wx-btn {
+	background: url(../images/wx.png);
+	background-size:63px 63px;
+	width: 63px;
+	height: 63px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn .yy-btn {
+	background: url(../images/yy.png);
+	background-size:63px 63px;
+	width: 63px;
+	height: 63px;
+	margin-bottom: 5px
+}
+.other-login .login-box .login-btn div.c-white {
+	width: 63px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+}

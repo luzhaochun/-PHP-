@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta charset="utf-8">
+	<title>WIFI营销精灵-<?php echo $title;?></title>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/style.css">
+	<!-- media queries css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/media-queries.css">
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/jquery-1.7.2.min.js"></script>
+	
+</head>
+
+<body>
+	<div class="header">
+		<div class="title">WIFI营销精灵</div>
+	</div>
+	<div class="content">
+	<div class="load-wrap" id="">
+		<img src="<?php echo APP_URL;?>/template/theme_1/images/loading.gif">
+		<div id="successText"> 正在为您连接WiFi 请稍等 <span class="c-orange" id="ShowDiv">10</span> 秒 </div>
+	</div>
+	</div>
+	
+	  <script>
+$(function () {  
+    var sec = $("#ShowDiv").text();          
+    setTimeout("lazyGo();", 1000);
+    <!-- 在预览模式中才跳转 -->
+    setTimeout("location.href ='<?php echo SITE_URL;?>/index.php?method=home'", sec*1000+1000);
+    });
+function lazyGo() {
+    var sec = $("#ShowDiv").text();
+    if (sec > 0){
+		$("#ShowDiv").text(--sec);
+    	setTimeout("lazyGo();", 1000);
+    }
+    else if (sec == 0){
+    	$("#successText").html("<div class='load-wrap'><p>连接成功 免费上网</p></div>");
+    }
+}
+</script>
+</body>
+</html>

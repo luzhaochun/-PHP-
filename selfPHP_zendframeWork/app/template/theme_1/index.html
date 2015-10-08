@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta charset="utf-8">
+	<title>WIFI营销精灵-<?php echo $title;?></title>
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/style.css">
+	<!-- media queries css -->
+	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL;?>/template/theme_1/css/media-queries.css">
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo APP_URL;?>/template/theme_1/js/idangerous.js"></script>
+</head>
+
+<body style="overflow: hidden;">
+	<div class="header">
+		<div class="title">WIFI营销精灵</div>
+	</div>
+	<div>
+	<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<?php if(!empty($adverts)){ 
+		    foreach($adverts as $item){
+		?>
+		<div class="swiper-slide roll-pic" data-id="<?php echo $item['id'];?>">
+			<img style="width:640px;height:1000px;" src="<?php echo $item['img_path'];?>">
+		</div>
+		<?php } }else{ ?>
+		<div class="swiper-slide roll-pic">
+            <img src="<?php echo APP_URL;?>/template/theme_1/images/bg3.jpg">
+        </div>
+		<?php } ?>
+	</div>
+	<div class="pagination" id="pagination">
+		<span class="swiper-pagination-switch"></span>
+		<span class="swiper-pagination-switch"></span>
+		<span class="swiper-pagination-switch"></span>
+	</div>
+	</div>
+	<script>
+        $(function(){
+            var $leadPic = ($(".roll-pic").length-1)*2500+100;
+            setTimeout(function() {
+                $("#login-btn").show();
+            }, $leadPic);
+            $('.swiper-container').css('max-height', $(window).height()+(80)+'px');
+        });
+
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.pagination',
+            paginationClickable: true,
+            moveStartThreshold: 100,
+            autoplay:2500,
+            onSlideChangeStart:function(e){
+               var target = $(mySwiper.activeSlide());
+               var advert_id = target.attr('data-id');
+               collectAdvert(advert_id);
+            },
+            onTouchStart:function(){
+            	var target = $(mySwiper.activeSlide());
+                var advert_id = target.attr('data-id');
+                collectAdvert(advert_id);
+            }
+        })
+        
+        var collectAdvert = function(advert_id){
+        	$.ajax({
+          	   data:{advert_id:advert_id,active:1},
+          	   type:'get',
+          	   url:'<?php echo SITE_URL;?>/index.php?method=ajaxCollectAdvert',
+          	   success:function(ret){
+          		   //do nothing here
+          	   }
+             })
+        }
+        
+        </script><!--/滑动背景-->
+	</div>
+	<div id="login-btn" class="hide" style="display:none;">
+		<a href="<?php echo SITE_URL;?>/index.php?method=login"><div class="login-btn c-white">免费上网</div></a>
+	</div>
+</body>
+</html>
